@@ -9,7 +9,6 @@ use Slim\Views\Twig;
 
 class MessageController
 {
-    //public function index(ServerRequest $request, Response $response)
     public function index($request, $response)
     {
         $view = Twig::fromRequest($request);
@@ -17,7 +16,6 @@ class MessageController
         return $view->render($response, 'message/index.twig');
     }
 
-    //public function sendMessage(ServerRequest $request, Response $response)
     public function sendMessage($request, $response)
     {
         $view = Twig::fromRequest($request);
@@ -37,7 +35,6 @@ class MessageController
         return $view->render($response, 'message/index.twig', ["message" => $messageData]);
     }
 
-    //public function allMessages(ServerRequest $request, Response $response)
     public function allMessages($request, $response) 
     {
         $repo = new MessageRepository();
