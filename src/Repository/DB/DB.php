@@ -19,13 +19,14 @@ class DB
         $this->DB_NAME = $cfgData['db_name'];
         $this->DB_USER = $cfgData['db_user'];
         $this->DB_PASSWORD = $cfgData['db_password'];
+        $this->DB_PORT = $cfgData['db_port'];
     }
 
     public function connectDB()
     {
         if (is_null($this->pdo)) {
             try {
-                $this->pdo = new PDO("mysql:host=" . $this->DB_HOST . ";dbname=" . $this->DB_NAME, $this->DB_USER, $this->DB_PASSWORD);
+                $this->pdo = new PDO("mysql:host=" . $this->DB_HOST . ";dbname=" . $this->DB_NAME . ";port=" . $this->DB_PORT, $this->DB_USER, $this->DB_PASSWORD);
             } catch (PDOException $e) {
                 print "ERROR: " . $e->getMessage();
                 die();
