@@ -7,11 +7,54 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap');
+a {
+    text-decoration: none;
+}
+header{
+    display: flex;
+height: 110px;
+background: rgba(6, 6, 6, 0.52);
+}
+.header_container{
+    margin: 0px 50px 0px 350px;
+display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header_word{
+    width: 169px;
+    height: 29px;
+    margin: 0px 25px 0px 25px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+</style>
     <title> Панель управления </title>
 </head>
 <body>  
+<header>
+    <div class="header_container">
+    <a href="http://localhost:8000/characters" class="header_word">CHARACTERS</a>
+    <a class="header_word">COMICS</a>
+    <a href="http://localhost:8000" class="header_word">MAIN</a>
+    <a href="http://localhost:8000/messages" class="header_word">MESSAGES</a>
+    <a href="http://localhost:8000/message/new" class="header_word">ADD MESSAGE</a>
+    </div>
+</header>
     <div class="container">
         {% block body %}{% endblock %}
     </div>
 </body>
+
 </html>

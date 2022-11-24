@@ -1,21 +1,21 @@
 {% extends "base.twig" %}
 
 {% block body %}
+
+<body style="background: #07060C;height: 110px;border: 1px solid #FFFFFF;background-image: url(https://media.contentapi.ea.com/content/dam/news/www-ea/common/ea-motive-new-title-teaser-16x9.jpg.adapt.1456w.jpg); background-position: center; background-repeat: no-repeat;background-position: 50% 15%;background-size: 800px 356px;"">
+<div style="display: block; margin: 150px 0px 0px 0px; align-items:center;">
+<div style="font-family: 'Montserrat';font-style: normal;font-weight: 500;font-size: 32px;line-height: 39px;display: flex;align-items: center;color: #FFFFFF;">Send message to the users</div>
     <form method="post" action="/messages" >
-        <div class="mb-3">
-            <label class="form-label" > Заголовок</label>
-            <input name="message[title]" type="text" class="form-control"  placeholder=""  value={{message.title}}>
-        </div>
-        <div class="mb-3">
-            <label  class="form-label" >Сообщение</label>
-            <input name="message[body]" type="text" class="form-control"  placeholder=""  value={{message.body}}>
+            <input name="message[title]" type="text" style="margin: 20px 0px 0px 0px;box-sizing: border-box;border: 1px solid #FFFFFF;width: 687px;height: 80px; background:transparent; color:#FFFFFF;"  placeholder="Title"  value={{message.title}}>
+
+            <input name="message[body]" type="text" style="margin: 20px 0px 0px 0px;box-sizing: border-box;border: 1px solid #FFFFFF;width: 1087px;height: 200px; background:transparent;color:#FFFFFF;"  placeholder="Body"  value={{message.body}}>
             {% if errors.body %}
                     <div style="color: red">{{ errors.body }}</div>
             {% endif %}
-        </div>
         {% if errors.messageLen %}
                     <div style="color: red">{{ errors.messageLen }}</div>
         {% endif %}
-        <button class="w-100 btn btn-primary btn-lg" type="submit">Отправить</button>
+        <button style="margin: 20px 0px 0px 0px;box-sizing: border-box;width: 591px;height: 61px;border: 1px solid #FFFFFF;font-family: 'Montserrat';font-style: normal;font-weight: 500;font-size: 32px;line-height: 39px;align-items: center;text-align: center;color: #FFFFFF; background-color:#07060C;" type="submit">send</button>
     </form>
+</div>
 {% endblock %}

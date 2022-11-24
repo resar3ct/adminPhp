@@ -1,9 +1,11 @@
 {% extends "base.twig" %}
 
 {% block body %}
+<body style="background: #07060C;height: 110px;border: 1px solid #FFFFFF;background-image: url(https://media.contentapi.ea.com/content/dam/news/www-ea/common/ea-motive-new-title-teaser-16x9.jpg.adapt.1456w.jpg); background-position: center; background-repeat: no-repeat;background-position: 50% 15%;background-size: 800px 356px;"">
+
     <ul class="list-group">
         {% for message in messages %}
-            <li class="list-group-item"> <b> {{ message.title }} </b>
+            <li style="margin: 20px 0px 0px 0px;box-sizing: border-box;border: 1px solid #FFFFFF;width: 1087px;height: 80px; background:transparent; color:#FFFFFF"> <b> {{ message.title }} </b>
                 <p> {{message.body }} </p>
             </li>
         {% endfor %}
